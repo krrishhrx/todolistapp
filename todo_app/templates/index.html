@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List App</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div id="container">
+        <div id="first_container">
+            <h1 class="heading">To Do List </h1>
+            <div>
+                <form action="" method="post">
+                    {% csrf_token %}
+                    <input type="text" name="items" placeholder="Add a task" id="">
+                    <input type="submit" value="Add" id="button">    
+                </form>
+            </div>
+        </div>
+        <div id="second_container"><center>
+            <table>
+                {% for items in items %}
+                <tr>
+                    <div id="tab">
+                        <td>{{ items.items }}</td>
+                        <td><a href="/edit/{{items.id}}">Edit</a></td>
+                        <td><a href="/delete/{{items.id}}">Delete</a></td>
+                    </div>
+                </tr>
+                {% endfor %}
+        
+            </table></center>
+            </div>
+    </div>
+</body>
+</html>

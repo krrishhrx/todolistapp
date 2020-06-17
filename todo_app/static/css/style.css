@@ -1,0 +1,36 @@
+#first_container{
+    background-color: black;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+.heading{
+    font-size: 100px;
+}
+
+input{
+    font-size: 32px;
+    border: none;
+}
+
+a{
+    text-decoration: none;
+   
+}
+
+#second_container{
+    text-align: center;
+    align-items: center;
+    padding-top: 50px;
+}
+
+#tab{
+    background-color: black;
+}
+td{
+    font-size: 25px;
+    background-color: black;
+    color: white;
+    padding: 20px;
+}
